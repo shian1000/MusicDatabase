@@ -1,0 +1,24 @@
+# settings.py
+from dataclasses import dataclass, field
+from upath import UPath
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+@dataclass
+class Settings:
+    database_dir: UPath = UPath("database")
+    music_database_dir: UPath = database_dir / UPath("music.db")
+    local_library_dir_str: str = "smb://jethrotull.local/Shared/Music/"
+    # local_library_dir_str: str = "/home/shianman/Documents/Code/MusicDatabase/"
+    local_library_dir: UPath = UPath(local_library_dir_str)
+    smb_username: str = os.getenv("SMB_USERNAME")
+    smb_password: str = os.getenv("SMB_PASSWORD")
+    smb_local_library_dir: UPath = UPath(f"smb://{smb_username}:{smb_password}@jethrotull.local/Shared/Music/")
+
+
+settings = Settings()  # single instance
+
+
+
