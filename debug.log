@@ -1,0 +1,3 @@
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x701e68362160>, 'Manage local files': <function manage_local_files at 0x701e67efdee0>, 'Settings': <function main_menu.<locals>.<lambda> at 0x701e67efdf80>}
