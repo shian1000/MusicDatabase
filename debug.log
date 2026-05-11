@@ -1,3 +1,65 @@
 ***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/database')
 ***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/database/music.db), autoflush=True, expire_on_commit=True)
 ***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x701e68362160>, 'Manage local files': <function manage_local_files at 0x701e67efdee0>, 'Settings': <function main_menu.<locals>.<lambda> at 0x701e67efdf80>}
+***Debug*** [CRASH @ 2026-05-11 19:31:52]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/menu_utils.py", line 51, in execute_menu_item
+    action_name = action()
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 20, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/menu_utils.py", line 51, in execute_menu_item
+    action_name = action()
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 71, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/menu_utils.py", line 51, in execute_menu_item
+    action_name = action()
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/get_rid_of_rubish_data.py", line 99, in get_rid_of_rubish_data
+    resolve_unknown_artist(songs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/get_rid_of_rubish_data.py", line 76, in resolve_unknown_artist
+    if not has_tag_on_song(song, "album_checked"):
+                           ^^^^
+UnboundLocalError: cannot access local variable 'song' where it is not associated with a value
+
+***Debug*** [CRASH @ 2026-05-11 19:32:14]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/menu_utils.py", line 51, in execute_menu_item
+    action_name = action()
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 20, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/menu_utils.py", line 51, in execute_menu_item
+    action_name = action()
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 71, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/menu_utils.py", line 51, in execute_menu_item
+    action_name = action()
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/get_rid_of_rubish_data.py", line 99, in get_rid_of_rubish_data
+    resolve_unknown_artist(songs)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/get_rid_of_rubish_data.py", line 76, in resolve_unknown_artist
+    if not has_tag_on_song(song, "album_checked"):
+                           ^^^^
+UnboundLocalError: cannot access local variable 'song' where it is not associated with a value
+
