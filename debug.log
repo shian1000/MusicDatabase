@@ -290,3 +290,2254 @@ Traceback (most recent call last):
         ~~~~~~~~~~~^^^
 IndexError: list index out of range
 
+***Debug*** [CRASH @ 2026-06-08 13:29:09]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 6, in <module>
+    from menu.main_menu import main_menu
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 2, in <module>
+    from menu.main_menu.enter_database import enter_database
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 3, in <module>
+    from menu.main_menu.enter_database.fetch_songs import fetch_songs, fetch_artists
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 5, in <module>
+    from menu.song_actions import song_actions
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 9, in <module>
+    from utils.youtube.manage_youtube_playlists import create_yt_playlist
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/youtube/manage_youtube_playlists.py", line 11, in <module>
+    from old.yt_cache import make_song_key, save_cache
+ModuleNotFoundError: No module named 'old'
+
+***Debug*** [CRASH @ 2026-06-08 13:29:12]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 6, in <module>
+    from menu.main_menu import main_menu
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 2, in <module>
+    from menu.main_menu.enter_database import enter_database
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 3, in <module>
+    from menu.main_menu.enter_database.fetch_songs import fetch_songs, fetch_artists
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 5, in <module>
+    from menu.song_actions import song_actions
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 9, in <module>
+    from utils.youtube.manage_youtube_playlists import create_yt_playlist
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/youtube/manage_youtube_playlists.py", line 11, in <module>
+    from old.yt_cache import make_song_key, save_cache
+ModuleNotFoundError: No module named 'old'
+
+***Debug*** [CRASH @ 2026-06-08 13:29:22]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 6, in <module>
+    from menu.main_menu import main_menu
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 2, in <module>
+    from menu.main_menu.enter_database import enter_database
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 3, in <module>
+    from menu.main_menu.enter_database.fetch_songs import fetch_songs, fetch_artists
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 5, in <module>
+    from menu.song_actions import song_actions
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 9, in <module>
+    from utils.youtube.manage_youtube_playlists import create_yt_playlist
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/youtube/manage_youtube_playlists.py", line 11, in <module>
+    from old.yt_cache import make_song_key, save_cache
+ModuleNotFoundError: No module named 'old'
+
+***Debug*** [CRASH @ 2026-06-08 13:34:41]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 21, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 379, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
+***Debug*** [CRASH @ 2026-06-08 14:21:18]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 20, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 71, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/merge_divide_menu.py", line 74, in divide_artists_menu
+    artist_id = int(obj.id)
+                    ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+
+***Debug*** [CRASH @ 2026-06-08 14:27:04]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 20, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 50, in fetch_songs
+    song_actions(songs_objects)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 47, in song_actions
+    execute_menu_item("What do you want to do with these songs?", action_map, exit_label="Nothing", one_time=True)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 37, in <lambda>
+    "Edit": lambda: edit_songs_menu(songs_objects),
+                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 134, in edit_songs_menu
+    edit_entry_menu(db_object=selected_song)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 67, in edit_entry_menu
+    delete_db_entry(db_object)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: delete_db_entry() missing 1 required positional argument: 'session'
+
+***Debug*** [CRASH @ 2026-06-08 14:27:30]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 20, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 50, in fetch_songs
+    song_actions(songs_objects)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 47, in song_actions
+    execute_menu_item("What do you want to do with these songs?", action_map, exit_label="Nothing", one_time=True)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 37, in <lambda>
+    "Edit": lambda: edit_songs_menu(songs_objects),
+                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 134, in edit_songs_menu
+    edit_entry_menu(db_object=selected_song)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 67, in edit_entry_menu
+    delete_db_entry(db_object)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: delete_db_entry() missing 1 required positional argument: 'session'
+
+***Debug*** [CRASH @ 2026-06-08 14:27:40]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 20, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 50, in fetch_songs
+    song_actions(songs_objects)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 47, in song_actions
+    execute_menu_item("What do you want to do with these songs?", action_map, exit_label="Nothing", one_time=True)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 95, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 37, in <lambda>
+    "Edit": lambda: edit_songs_menu(songs_objects),
+                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 134, in edit_songs_menu
+    edit_entry_menu(db_object=selected_song)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 67, in edit_entry_menu
+    delete_db_entry(db_object)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: delete_db_entry() missing 1 required positional argument: 'session'
+
+***Debug*** [CRASH @ 2026-06-08 14:50:23]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 71, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 37, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 16, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 153, in import_data_from_mp3_tags
+    folder = Path(folder_path).resolve()
+             ~~~~^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 149, in __init__
+    raise TypeError(
+    ...<2 lines>...
+        f"not {type(path).__name__!r}")
+TypeError: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+
+***Debug*** [CRASH @ 2026-06-30 13:59:00]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/manual_management/__init__.py", line 17, in manual_management
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 180, in add_songs_menu
+    if (song_labels[1]):
+        ~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+***Debug*** [CRASH @ 2026-06-30 14:04:08]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/manual_management/__init__.py", line 17, in manual_management
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 185, in add_songs_menu
+    if (song_labels[5]):
+        ~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+***Debug*** [CRASH @ 2026-06-30 14:57:32]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/manual_management/__init__.py", line 17, in manual_management
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 185, in add_songs_menu
+    if (song_labels[5]):
+        ~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+***Debug*** [CRASH @ 2026-06-30 15:58:06]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/manual_management/__init__.py", line 17, in manual_management
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 180, in add_songs_menu
+    if (song_labels[1]):
+        ~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+***Debug*** [CRASH @ 2026-06-30 16:00:59]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/manual_management/__init__.py", line 17, in manual_management
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 180, in add_songs_menu
+    if (song_labels[1]):
+        ~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+***Debug*** [CRASH @ 2026-07-04 13:10:32]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 26, in import_data
+    song_actions(imported_songs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 49, in song_actions
+    execute_menu_item("What do you want to do with these songs?", action_map, exit_label="Nothing", one_time=True)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 42, in <lambda>
+    "Make YT playlist": lambda: make_yt_playlist_menu(songs_objects),
+                                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/__init__.py", line 23, in make_yt_playlist_menu
+    create_yt_playlist(songs_objects, playlist_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/youtube/manage_youtube_playlists.py", line 349, in create_yt_playlist
+    video_id = search_video(youtube, artist, title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/youtube/manage_youtube_playlists.py", line 218, in search_video
+    ).execute()
+      ~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/googleapiclient/http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=Virelai+-+N%C3%B8kken+audio&type=video&maxResults=5&videoCategoryId=10&alt=json returned "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:431353450842'.". Details: "[{'message': "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:431353450842'.", 'domain': 'global', 'reason': 'rateLimitExceeded'}]">
+
+***Debug*** [CRASH @ 2026-07-04 13:36:24]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/merge_divide_menu.py", line 74, in divide_artists_menu
+    artist_id = int(obj.id)
+                    ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+
+***Debug*** [CRASH @ 2026-07-05 14:39:12]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [CRASH @ 2026-07-05 14:39:41]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [CRASH @ 2026-07-05 14:40:35]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [CRASH @ 2026-07-05 14:48:05]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: artists.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 196, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 117, in resolve_artist
+    add_db_entry(new_artist_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_management.py", line 202, in add_db_entry
+    music_session.commit()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: artists.name
+[SQL: INSERT INTO artists (name, origin, synonyms) VALUES (?, ?, ?)]
+[parameters: (None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+***Debug*** [CRASH @ 2026-07-05 14:48:14]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: artists.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 196, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 117, in resolve_artist
+    add_db_entry(new_artist_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_management.py", line 202, in add_db_entry
+    music_session.commit()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: artists.name
+[SQL: INSERT INTO artists (name, origin, synonyms) VALUES (?, ?, ?)]
+[parameters: (None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+***Debug*** [CRASH @ 2026-07-05 14:51:44]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 202, in import_data_from_mp3_tags
+    new_song_obj = resolve_song(metadata, new_artist_obj)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 132, in resolve_song
+    existing_artists_songs = get_songs_from_db_session(artist_categories[2], artist_obj.id)
+                                                                             ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+
+***Debug*** [CRASH @ 2026-07-05 14:56:43]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [CRASH @ 2026-07-05 14:57:05]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x70580c64b1c0>, 'Manage local files': <function manage_local_files at 0x70580c64b5e0>, 'Settings': <function main_menu.<locals>.<lambda> at 0x70580c64b530>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x70580c64b060>, 'Fetch artists': <function fetch_artists at 0x70580e5ceda0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x705811ba33d0>, 'Manage database': <function manage_database at 0x70580d9b4b40>, 'Show whole database': <function show_whole_database at 0x70580c64b480>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x70580e3fca90>, 'Manual management': <function manual_management at 0x70580d9b40f0>, 'Resolve duplicates': <function resolve_duplicates at 0x70580d9b49e0>, 'Merge artists': <function merge_artists_menu at 0x70580d9b4040>, 'Divide artists': <function divide_artists_menu at 0x70580d9b4460>, 'Spell check existing data': <function check_spelling_menu at 0x70580d9b4a90>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x70580d9b4930>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x70580e3fc9e0>, 'Import data from mp3 tags': <function import_data at 0x70580e3fc7d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 14:57:28]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x79b435a6b270>, 'Manage local files': <function manage_local_files at 0x79b435a6b690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x79b435a6b5e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x79b435a6b110>, 'Fetch artists': <function fetch_artists at 0x79b43777ada0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x79b43afa33d0>, 'Manage database': <function manage_database at 0x79b436dd8b40>, 'Show whole database': <function show_whole_database at 0x79b435a6b530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x79b4378514e0>, 'Manual management': <function manual_management at 0x79b436dd80f0>, 'Resolve duplicates': <function resolve_duplicates at 0x79b436dd89e0>, 'Merge artists': <function merge_artists_menu at 0x79b436dd8040>, 'Divide artists': <function divide_artists_menu at 0x79b436dd8460>, 'Spell check existing data': <function check_spelling_menu at 0x79b436dd8a90>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x79b436dd8930>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x79b4378009e0>, 'Import data from mp3 tags': <function import_data at 0x79b4378007d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 14:58:40]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 191, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x78f81804f270>, 'Manage local files': <function manage_local_files at 0x78f81804f690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x78f81804f5e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x78f81804f110>, 'Fetch artists': <function fetch_artists at 0x78f819ddada0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x78f81d65f3d0>, 'Manage database': <function manage_database at 0x78f8193c0bf0>, 'Show whole database': <function show_whole_database at 0x78f81804f530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x78f819ead4e0>, 'Manual management': <function manual_management at 0x78f8193c01a0>, 'Resolve duplicates': <function resolve_duplicates at 0x78f8193c0a90>, 'Merge artists': <function merge_artists_menu at 0x78f8193c00f0>, 'Divide artists': <function divide_artists_menu at 0x78f8193c0510>, 'Spell check existing data': <function check_spelling_menu at 0x78f8193c0b40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x78f8193c09e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x78f819e609e0>, 'Import data from mp3 tags': <function import_data at 0x78f819e607d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:00:51]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 193, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x7f1923b3b270>, 'Manage local files': <function manage_local_files at 0x7f1923b3b690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x7f1923b3b5e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x7f1923b3b110>, 'Fetch artists': <function fetch_artists at 0x7f1925b5eda0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x7f19291a33d0>, 'Manage database': <function manage_database at 0x7f1924ea8b40>, 'Show whole database': <function show_whole_database at 0x7f1923b3b530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x7f19259d94e0>, 'Manual management': <function manual_management at 0x7f1924ea80f0>, 'Resolve duplicates': <function resolve_duplicates at 0x7f1924ea89e0>, 'Merge artists': <function merge_artists_menu at 0x7f1924ea8040>, 'Divide artists': <function divide_artists_menu at 0x7f1924ea8460>, 'Spell check existing data': <function check_spelling_menu at 0x7f1924ea8a90>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x7f1924ea8930>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x7f192598c9e0>, 'Import data from mp3 tags': <function import_data at 0x7f192598c7d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:01:26]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 194, in import_data_from_mp3_tags
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x773bb403f270>, 'Manage local files': <function manage_local_files at 0x773bb403f690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x773bb403f5e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x773bb403f110>, 'Fetch artists': <function fetch_artists at 0x773bb5f5eda0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x773bb95a33d0>, 'Manage database': <function manage_database at 0x773bb53acbf0>, 'Show whole database': <function show_whole_database at 0x773bb403f530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x773bb5e114e0>, 'Manual management': <function manual_management at 0x773bb53ac1a0>, 'Resolve duplicates': <function resolve_duplicates at 0x773bb53aca90>, 'Merge artists': <function merge_artists_menu at 0x773bb53ac0f0>, 'Divide artists': <function divide_artists_menu at 0x773bb53ac510>, 'Spell check existing data': <function check_spelling_menu at 0x773bb53acb40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x773bb53ac9e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x773bb5dc49e0>, 'Import data from mp3 tags': <function import_data at 0x773bb5dc47d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:01:44]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 195, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x72e53a643270>, 'Manage local files': <function manage_local_files at 0x72e53a643690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x72e53a6435e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x72e53a643110>, 'Fetch artists': <function fetch_artists at 0x72e53c602da0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x72e53fba33d0>, 'Manage database': <function manage_database at 0x72e53b9b0b40>, 'Show whole database': <function show_whole_database at 0x72e53a643530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x72e53c47d4e0>, 'Manual management': <function manual_management at 0x72e53b9b00f0>, 'Resolve duplicates': <function resolve_duplicates at 0x72e53b9b09e0>, 'Merge artists': <function merge_artists_menu at 0x72e53b9b0040>, 'Divide artists': <function divide_artists_menu at 0x72e53b9b0460>, 'Spell check existing data': <function check_spelling_menu at 0x72e53b9b0a90>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x72e53b9b0930>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x72e53c4309e0>, 'Import data from mp3 tags': <function import_data at 0x72e53c4307d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:02:10]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 196, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x7091b6a4b270>, 'Manage local files': <function manage_local_files at 0x7091b6a4b690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x7091b6a4b5e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x7091b6a4b110>, 'Fetch artists': <function fetch_artists at 0x7091b89cada0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x7091bbfa33d0>, 'Manage database': <function manage_database at 0x7091b7db4bf0>, 'Show whole database': <function show_whole_database at 0x7091b6a4b530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x7091b887d4e0>, 'Manual management': <function manual_management at 0x7091b7db41a0>, 'Resolve duplicates': <function resolve_duplicates at 0x7091b7db4a90>, 'Merge artists': <function merge_artists_menu at 0x7091b7db40f0>, 'Divide artists': <function divide_artists_menu at 0x7091b7db4510>, 'Spell check existing data': <function check_spelling_menu at 0x7091b7db4b40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x7091b7db49e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x7091b88309e0>, 'Import data from mp3 tags': <function import_data at 0x7091b88307d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:02:47]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 196, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x75b5b0437270>, 'Manage local files': <function manage_local_files at 0x75b5b0437690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x75b5b04375e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x75b5b0437110>, 'Fetch artists': <function fetch_artists at 0x75b5b2462da0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x75b5b5a9f3d0>, 'Manage database': <function manage_database at 0x75b5b17a8bf0>, 'Show whole database': <function show_whole_database at 0x75b5b0437530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x75b5b22fd4e0>, 'Manual management': <function manual_management at 0x75b5b17a81a0>, 'Resolve duplicates': <function resolve_duplicates at 0x75b5b17a8a90>, 'Merge artists': <function merge_artists_menu at 0x75b5b17a80f0>, 'Divide artists': <function divide_artists_menu at 0x75b5b17a8510>, 'Spell check existing data': <function check_spelling_menu at 0x75b5b17a8b40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x75b5b17a89e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x75b5b22ac9e0>, 'Import data from mp3 tags': <function import_data at 0x75b5b22ac7d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x72eb1b647270>, 'Manage local files': <function manage_local_files at 0x72eb1b647690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x72eb1b6475e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x72eb1b647110>, 'Fetch artists': <function fetch_artists at 0x72eb1d62eda0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x72eb20c3f3d0>, 'Manage database': <function manage_database at 0x72eb1c9b8bf0>, 'Show whole database': <function show_whole_database at 0x72eb1b647530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x72eb1d4a94e0>, 'Manual management': <function manual_management at 0x72eb1c9b81a0>, 'Resolve duplicates': <function resolve_duplicates at 0x72eb1c9b8a90>, 'Merge artists': <function merge_artists_menu at 0x72eb1c9b80f0>, 'Divide artists': <function divide_artists_menu at 0x72eb1c9b8510>, 'Spell check existing data': <function check_spelling_menu at 0x72eb1c9b8b40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x72eb1c9b89e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x72eb1d4589e0>, 'Import data from mp3 tags': <function import_data at 0x72eb1d4587d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:04:23]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 201, in import_data_from_mp3_tags
+    continue
+    
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x76ae91d43270>, 'Manage local files': <function manage_local_files at 0x76ae91d43690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x76ae91d435e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x76ae91d43110>, 'Fetch artists': <function fetch_artists at 0x76ae93d2ada0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x76ae973833d0>, 'Manage database': <function manage_database at 0x76ae930b0bf0>, 'Show whole database': <function show_whole_database at 0x76ae91d43530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x76ae93bcd4e0>, 'Manual management': <function manual_management at 0x76ae930b01a0>, 'Resolve duplicates': <function resolve_duplicates at 0x76ae930b0a90>, 'Merge artists': <function merge_artists_menu at 0x76ae930b00f0>, 'Divide artists': <function divide_artists_menu at 0x76ae930b0510>, 'Spell check existing data': <function check_spelling_menu at 0x76ae930b0b40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x76ae930b09e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x76ae93b809e0>, 'Import data from mp3 tags': <function import_data at 0x76ae93b807d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): ''
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': None, 'artist_name': None, 'album': None, 'year': None, 'language': 'Unknown', 'origin': None}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist None, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'None' | Title: 'None'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: '' | Title: ''"
+***Debug*** [CRASH @ 2026-07-05 15:04:30]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 203, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 106, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 23, in check_artist_spelling
+    spell_check_result = check_spelling(new_artist_name, metadata["title"])
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 137, in check_spelling
+    fuzzy_title = make_fuzzy(title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 114, in make_fuzzy
+    text = re.sub(r'[・･•·]', ' ', text)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/re/__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x7bf1a203b270>, 'Manage local files': <function manage_local_files at 0x7bf1a203b690>, 'Settings': <function main_menu.<locals>.<lambda> at 0x7bf1a203b5e0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x7bf1a203b110>, 'Fetch artists': <function fetch_artists at 0x7bf1a4062da0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x7bf1a769f3d0>, 'Manage database': <function manage_database at 0x7bf1a33a8bf0>, 'Show whole database': <function show_whole_database at 0x7bf1a203b530>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x7bf1a3f014e0>, 'Manual management': <function manual_management at 0x7bf1a33a81a0>, 'Resolve duplicates': <function resolve_duplicates at 0x7bf1a33a8a90>, 'Merge artists': <function merge_artists_menu at 0x7bf1a33a80f0>, 'Divide artists': <function divide_artists_menu at 0x7bf1a33a8510>, 'Spell check existing data': <function check_spelling_menu at 0x7bf1a33a8b40>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x7bf1a33a89e0>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x7bf1a3eb49e0>, 'Import data from mp3 tags': <function import_data at 0x7bf1a3eb47d0>}
+***Debug*** [mp3_utils.py:81] f'[METADATA FALLBACK] ID3 extraction failed for {file.name}: {e}' (str): "[METADATA FALLBACK] ID3 extraction failed for a Eurovision song created by Artificial Intelligence_ Blue Jeans and Bloody Tears.mp3: can't sync to MPEG frame"
+***Debug*** [mp3_utils.py:88] f"[METADATA FALLBACK] Extracted from filename: artist='{artist_name}', title='{title}'" (str): "[METADATA FALLBACK] Extracted from filename: artist='None', title='None'"
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x7d25ea43f110>, 'Manage local files': <function manage_local_files at 0x7d25ea43f530>, 'Settings': <function main_menu.<locals>.<lambda> at 0x7d25ea43f480>}
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x7918b724b110>, 'Manage local files': <function manage_local_files at 0x7918b724b530>, 'Settings': <function main_menu.<locals>.<lambda> at 0x7918b724b480>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x7918b724afb0>, 'Fetch artists': <function fetch_artists at 0x7918b926acf0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x7918bc87f320>, 'Manage database': <function manage_database at 0x7918b85b8b40>, 'Show whole database': <function show_whole_database at 0x7918b724b3d0>}
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x78cd91853110>, 'Manage local files': <function manage_local_files at 0x78cd91853530>, 'Settings': <function main_menu.<locals>.<lambda> at 0x78cd91853480>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x78cd91852fb0>, 'Fetch artists': <function fetch_artists at 0x78cd9382ecf0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x78cd96e5f320>, 'Manage database': <function manage_database at 0x78cd92bc0b40>, 'Show whole database': <function show_whole_database at 0x78cd918533d0>}
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): 'apel'
+***Debug*** [database_getter.py:183] category (str): 'name'
+***Debug*** [database_getter.py:185] normalized (str): 'name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'name'
+***Debug*** [database_getter.py:295] ['apel'] (str): 'name'
+***Debug*** [__init__.py:42] songs_objects (list): [<utils.database.datatables.Song object at 0x78cd91210980>, <utils.database.datatables.Song object at 0x78cd915c6c10>, <utils.database.datatables.Song object at 0x78cd915c6ad0>, <utils.database.datatables.Song object at 0x78cd91449a70>]
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x78cd9365cb40>, 'Manual management': <function manual_management at 0x78cd92bc00f0>, 'Resolve duplicates': <function resolve_duplicates at 0x78cd92bc09e0>, 'Merge artists': <function merge_artists_menu at 0x78cd92bc0040>, 'Divide artists': <function divide_artists_menu at 0x78cd92bc0460>, 'Spell check existing data': <function check_spelling_menu at 0x78cd92bc0a90>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x78cd92bc0930>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x78cd9365c930>, 'Import data from mp3 tags': <function import_data at 0x78cd9365c720>}
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): "[METADATA] Successfully extracted from ID3 tags: Aurora - 'The Seed' Live Performance _ Vevo.mp3"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'aurora'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [text_utils.py:248] a (str): 'Aurora'
+***Debug*** [text_utils.py:249] b (str): 'AURORA'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is Aurora'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is AURORA'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'AURORA'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '25'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['25'] (str): 'artist id'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song Aurora - 'The Seed' Live Performance _ Vevo, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Aurora' | Title: ''The Seed' Live Performance _ Vevo'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'aurora' | Title: 'the seed live performance _ vevo'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Aurora~' | Title: ''The~ Seed'~ Live~ Performance~ _~ Vevo~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): "Attempting MB Query: recording:'The~ Seed'~ Live~ Performance~ _~ Vevo~ AND artist:Aurora~"
+***Debug*** [music_db_manager.py:20] BASE_DIR (PosixUPath): PosixUPath('/home/shianman/Documents/Code/MusicDatabase/src/database')
+***Debug*** [music_db_manager.py:25] SessionLocal (sessionmaker): sessionmaker(class_='Session', bind=Engine(sqlite:////home/shianman/Documents/Code/MusicDatabase/src/database/music.db), autoflush=True, expire_on_commit=True)
+***Debug*** [__init__.py:13] action_map (dict): {'Enter database': <function enter_database at 0x780eac847060>, 'Manage local files': <function manage_local_files at 0x780eac847480>, 'Settings': <function main_menu.<locals>.<lambda> at 0x780eac8473d0>}
+***Debug*** [__init__.py:21] action_map (dict): {'Fetch songs': <function fetch_songs at 0x780eac846f00>, 'Fetch artists': <function fetch_artists at 0x780eae86acf0>, 'Fetch songs from txt file': <function fetch_songs_from_txt_file_menu at 0x780eb1e7f320>, 'Manage database': <function manage_database at 0x780eadbb8a90>, 'Show whole database': <function show_whole_database at 0x780eac847320>}
+***Debug*** [__init__.py:82] action_map (dict): {'Fetch database data': <function fetch_database_data at 0x780eae694b40>, 'Manual management': <function manual_management at 0x780eadbb8040>, 'Resolve duplicates': <function resolve_duplicates at 0x780eadbb8930>, 'Merge artists': <function merge_artists_menu at 0x780eadbb7ed0>, 'Divide artists': <function divide_artists_menu at 0x780eadbb83b0>, 'Spell check existing data': <function check_spelling_menu at 0x780eadbb89e0>, 'Get rid of rubish data': <function get_rid_of_rubish_data at 0x780eadbb8880>}
+***Debug*** [__init__.py:37] action_map (dict): {'Fill missing data': <function fill_missing_data at 0x780eae694930>, 'Import data from mp3 tags': <function import_data at 0x780eae694720>}
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): "[METADATA] Successfully extracted from ID3 tags: Aurora - 'The Seed' Live Performance _ Vevo.mp3"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'aurora'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [text_utils.py:248] a (str): 'Aurora'
+***Debug*** [text_utils.py:249] b (str): 'AURORA'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is Aurora'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is AURORA'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'AURORA'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '25'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['25'] (str): 'artist id'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song Aurora - 'The Seed' Live Performance _ Vevo, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Aurora' | Title: ''The Seed' Live Performance _ Vevo'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'aurora' | Title: 'the seed live performance _ vevo'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Aurora~' | Title: ''The~ Seed'~ Live~ Performance~ _~ Vevo~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): "Attempting MB Query: recording:'The~ Seed'~ Live~ Performance~ _~ Vevo~ AND artist:Aurora~"
+***Debug*** [text_utils.py:180] f'Primary results count: {len(recordings)}' (str): 'Primary results count: 20'
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] ''The Seed' Live Performance _ Vevo' (the seed live performance _ vevo) vs 'A Temporary High (Live Performance | Vevo)' (a temporary high live performance vevo) = 0.69"
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Aurora' (aurora) vs 'AURORA' (aurora) = 1.00"
+***Debug*** [text_utils.py:204] f'[MB RESULT] Score: {mb_score}' (str): '[MB RESULT] Score: 100'
+***Debug*** [text_utils.py:205] f"  Title: input='{title}' ({central_normalize(title)}) vs MB='{mb_title}' ({central_normalize(mb_title)})" (str): "  Title: input=''The Seed' Live Performance _ Vevo' (the seed live performance _ vevo) vs MB='A Temporary High (Live Performance | Vevo)' (a temporary high live performance vevo)"
+***Debug*** [text_utils.py:206] f"  Artist: input='{artist}' ({central_normalize(artist)}) vs MB='{mb_artist}' ({central_normalize(mb_artist)})" (str): "  Artist: input='Aurora' (aurora) vs MB='AURORA' (aurora)"
+***Debug*** [text_utils.py:229] f'[SPELLCHECK END] Corrected: {is_corrected} | Artist sim: {artist_sim:.2f} | Title sim: {title_sim:.2f}' (str): '[SPELLCHECK END] Corrected: True | Artist sim: 1.00 | Title sim: 0.69'
+***Debug*** [import_data_from_mp3_tags.py:62] spell_check_result (dict): {'input_artist': 'Aurora', 'input_title': "'The Seed' Live Performance _ Vevo", 'input_artist_norm': 'aurora', 'input_title_norm': 'the seed live performance _ vevo', 'corrected_artist': 'AURORA', 'corrected_title': "'The Seed' Live Performance _ Vevo", 'corrected_artist_norm': 'aurora', 'corrected_title_norm': 'the seed live performance _ vevo', 'corrected': True, 'mb_score': 100, 'title_similarity': 0.69, 'artist_similarity': 1.0, 'found': True}
+***Debug*** [import_data_from_mp3_tags.py:65] corrected_spelling (str): "'The Seed' Live Performance _ Vevo"
+***Debug*** [text_utils.py:248] a (str): "'The Seed' Live Performance _ Vevo"
+***Debug*** [text_utils.py:249] b (str): "'The Seed' Live Performance _ Vevo"
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:68] similarity_percent (float): 1.0
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '25'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['25'] (str): 'artist id'
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): '[METADATA] Successfully extracted from ID3 tags: AURORA - Potion For Love.mp3'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'aurora'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [text_utils.py:248] a (str): 'AURORA'
+***Debug*** [text_utils.py:249] b (str): 'AURORA'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is AURORA'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is AURORA'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'AURORA'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '25'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['25'] (str): 'artist id'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song AURORA - Potion For Love, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'AURORA' | Title: 'Potion For Love'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'aurora' | Title: 'potion for love'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'AURORA~' | Title: 'Potion~ For~ Love~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): 'Attempting MB Query: recording:Potion~ For~ Love~ AND artist:AURORA~'
+***Debug*** [text_utils.py:180] f'Primary results count: {len(recordings)}' (str): 'Primary results count: 20'
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Potion For Love' (potion for love) vs 'A Potion for Love' (a potion for love) = 0.94"
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'AURORA' (aurora) vs 'AURORA' (aurora) = 1.00"
+***Debug*** [text_utils.py:204] f'[MB RESULT] Score: {mb_score}' (str): '[MB RESULT] Score: 100'
+***Debug*** [text_utils.py:205] f"  Title: input='{title}' ({central_normalize(title)}) vs MB='{mb_title}' ({central_normalize(mb_title)})" (str): "  Title: input='Potion For Love' (potion for love) vs MB='A Potion for Love' (a potion for love)"
+***Debug*** [text_utils.py:206] f"  Artist: input='{artist}' ({central_normalize(artist)}) vs MB='{mb_artist}' ({central_normalize(mb_artist)})" (str): "  Artist: input='AURORA' (aurora) vs MB='AURORA' (aurora)"
+***Debug*** [text_utils.py:229] f'[SPELLCHECK END] Corrected: {is_corrected} | Artist sim: {artist_sim:.2f} | Title sim: {title_sim:.2f}' (str): '[SPELLCHECK END] Corrected: True | Artist sim: 1.00 | Title sim: 0.94'
+***Debug*** [import_data_from_mp3_tags.py:62] spell_check_result (dict): {'input_artist': 'AURORA', 'input_title': 'Potion For Love', 'input_artist_norm': 'aurora', 'input_title_norm': 'potion for love', 'corrected_artist': 'AURORA', 'corrected_title': 'A Potion for Love', 'corrected_artist_norm': 'aurora', 'corrected_title_norm': 'a potion for love', 'corrected': True, 'mb_score': 100, 'title_similarity': 0.94, 'artist_similarity': 1.0, 'found': True}
+***Debug*** [import_data_from_mp3_tags.py:65] corrected_spelling (str): 'A Potion for Love'
+***Debug*** [text_utils.py:248] a (str): 'Potion For Love'
+***Debug*** [text_utils.py:249] b (str): 'A Potion for Love'
+***Debug*** [text_utils.py:252] result (float): 0.9375
+***Debug*** [import_data_from_mp3_tags.py:68] similarity_percent (float): 0.9375
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '25'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['25'] (str): 'artist id'
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): '[METADATA] Successfully extracted from ID3 tags: Depeche Mode - People Are People .mp3'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'depeche mode'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [text_utils.py:248] a (str): 'Depeche Mode'
+***Debug*** [text_utils.py:249] b (str): 'Depeche Mode'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is Depeche Mode'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is Depeche Mode'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'Depeche Mode'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '66'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['66'] (str): 'artist id'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song Depeche Mode - People Are People , trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Depeche Mode' | Title: 'People Are People '"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'depeche mode' | Title: 'people are people'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Depeche~ Mode~' | Title: 'People~ Are~ People~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): 'Attempting MB Query: recording:People~ Are~ People~ AND artist:Depeche~ Mode~'
+***Debug*** [text_utils.py:180] f'Primary results count: {len(recordings)}' (str): 'Primary results count: 20'
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'People Are People ' (people are people) vs 'People Are People' (people are people) = 1.00"
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Depeche Mode' (depeche mode) vs 'Depeche Mode' (depeche mode) = 1.00"
+***Debug*** [text_utils.py:204] f'[MB RESULT] Score: {mb_score}' (str): '[MB RESULT] Score: 100'
+***Debug*** [text_utils.py:205] f"  Title: input='{title}' ({central_normalize(title)}) vs MB='{mb_title}' ({central_normalize(mb_title)})" (str): "  Title: input='People Are People ' (people are people) vs MB='People Are People' (people are people)"
+***Debug*** [text_utils.py:206] f"  Artist: input='{artist}' ({central_normalize(artist)}) vs MB='{mb_artist}' ({central_normalize(mb_artist)})" (str): "  Artist: input='Depeche Mode' (depeche mode) vs MB='Depeche Mode' (depeche mode)"
+***Debug*** [text_utils.py:229] f'[SPELLCHECK END] Corrected: {is_corrected} | Artist sim: {artist_sim:.2f} | Title sim: {title_sim:.2f}' (str): '[SPELLCHECK END] Corrected: True | Artist sim: 1.00 | Title sim: 1.00'
+***Debug*** [import_data_from_mp3_tags.py:62] spell_check_result (dict): {'input_artist': 'Depeche Mode', 'input_title': 'People Are People ', 'input_artist_norm': 'depeche mode', 'input_title_norm': 'people are people', 'corrected_artist': 'Depeche Mode', 'corrected_title': 'People Are People', 'corrected_artist_norm': 'depeche mode', 'corrected_title_norm': 'people are people', 'corrected': True, 'mb_score': 100, 'title_similarity': 1.0, 'artist_similarity': 1.0, 'found': True}
+***Debug*** [import_data_from_mp3_tags.py:65] corrected_spelling (str): 'People Are People'
+***Debug*** [text_utils.py:248] a (str): 'People Are People '
+***Debug*** [text_utils.py:249] b (str): 'People Are People'
+***Debug*** [text_utils.py:252] result (float): 0.9714285714285714
+***Debug*** [import_data_from_mp3_tags.py:68] similarity_percent (float): 0.9714285714285714
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '66'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['66'] (str): 'artist id'
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): '[METADATA] Successfully extracted from ID3 tags: Beach Boys- I get Around.mp3'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'unknown artist'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:385] 'Falling back to Python-side normalized filtering' (str): 'Falling back to Python-side normalized filtering'
+***Debug*** [database_getter.py:391] 'No such artists found' (str): 'No such artists found'
+***Debug*** [import_data_from_mp3_tags.py:19] metadata (dict): {'title': 'Unknown Title', 'artist_name': 'Unknown Artist', 'album': None, 'year': '1963', 'language': 'English', 'origin': 'USA - California - Hawthorne'}
+***Debug*** [import_data_from_mp3_tags.py:21] f"Couldn't find artist {new_artist_name}, trying spellcheck" (str): "Couldn't find artist Unknown Artist, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Unknown Artist' | Title: 'Unknown Title'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'unknown artist' | Title: 'unknown title'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Unknown~ Artist~' | Title: 'Unknown~ Title~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): 'Attempting MB Query: recording:Unknown~ Title~ AND artist:Unknown~ Artist~'
+***Debug*** [text_utils.py:180] f'Primary results count: {len(recordings)}' (str): 'Primary results count: 20'
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Unknown Title' (unknown title) vs 'Tile Title' (tile title) = 0.52"
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Unknown Artist' (unknown artist) vs '[unknown]' (unknown) = 0.67"
+***Debug*** [text_utils.py:204] f'[MB RESULT] Score: {mb_score}' (str): '[MB RESULT] Score: 100'
+***Debug*** [text_utils.py:205] f"  Title: input='{title}' ({central_normalize(title)}) vs MB='{mb_title}' ({central_normalize(mb_title)})" (str): "  Title: input='Unknown Title' (unknown title) vs MB='Tile Title' (tile title)"
+***Debug*** [text_utils.py:206] f"  Artist: input='{artist}' ({central_normalize(artist)}) vs MB='{mb_artist}' ({central_normalize(mb_artist)})" (str): "  Artist: input='Unknown Artist' (unknown artist) vs MB='[unknown]' (unknown)"
+***Debug*** [text_utils.py:229] f'[SPELLCHECK END] Corrected: {is_corrected} | Artist sim: {artist_sim:.2f} | Title sim: {title_sim:.2f}' (str): '[SPELLCHECK END] Corrected: False | Artist sim: 0.67 | Title sim: 0.52'
+***Debug*** [import_data_from_mp3_tags.py:24] new_artist_name (str): 'Unknown Artist'
+***Debug*** [import_data_from_mp3_tags.py:25] metadata['title'] (str): 'Unknown Title'
+***Debug*** [import_data_from_mp3_tags.py:26] spell_check_result (dict): {'input_artist': 'Unknown Artist', 'input_title': 'Unknown Title', 'input_artist_norm': 'unknown artist', 'input_title_norm': 'unknown title', 'corrected_artist': 'Unknown Artist', 'corrected_title': 'Unknown Title', 'corrected_artist_norm': 'unknown artist', 'corrected_title_norm': 'unknown title', 'corrected': False, 'mb_score': 100, 'title_similarity': 0.52, 'artist_similarity': 0.67, 'found': True}
+***Debug*** [import_data_from_mp3_tags.py:29] corrected_spelling (str): 'Unknown Artist'
+***Debug*** [text_utils.py:248] a (str): 'Unknown Artist'
+***Debug*** [text_utils.py:249] b (str): 'Unknown Artist'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:32] new_artist_name (str): 'Unknown Artist'
+***Debug*** [import_data_from_mp3_tags.py:33] corrected_spelling (str): 'Unknown Artist'
+***Debug*** [import_data_from_mp3_tags.py:34] similarity_percent (float): 1.0
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'Unknown Artist'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:385] 'Falling back to Python-side normalized filtering' (str): 'Falling back to Python-side normalized filtering'
+***Debug*** [database_getter.py:391] 'No such artists found' (str): 'No such artists found'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '1258'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['1258'] (str): 'artist id'
+***Debug*** [database_getter.py:313] 'Falling back to Python-side normalized filtering' (str): 'Falling back to Python-side normalized filtering'
+***Debug*** [database_getter.py:320] 'No such songs found' (str): 'No such songs found'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song Unknown Artist - Unknown Title, trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Unknown Artist' | Title: 'Unknown Title'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'unknown artist' | Title: 'unknown title'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Unknown~ Artist~' | Title: 'Unknown~ Title~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): 'Attempting MB Query: recording:Unknown~ Title~ AND artist:Unknown~ Artist~'
+***Debug*** [text_utils.py:180] f'Primary results count: {len(recordings)}' (str): 'Primary results count: 20'
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Unknown Title' (unknown title) vs 'Tile Title' (tile title) = 0.52"
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Unknown Artist' (unknown artist) vs '[unknown]' (unknown) = 0.67"
+***Debug*** [text_utils.py:204] f'[MB RESULT] Score: {mb_score}' (str): '[MB RESULT] Score: 100'
+***Debug*** [text_utils.py:205] f"  Title: input='{title}' ({central_normalize(title)}) vs MB='{mb_title}' ({central_normalize(mb_title)})" (str): "  Title: input='Unknown Title' (unknown title) vs MB='Tile Title' (tile title)"
+***Debug*** [text_utils.py:206] f"  Artist: input='{artist}' ({central_normalize(artist)}) vs MB='{mb_artist}' ({central_normalize(mb_artist)})" (str): "  Artist: input='Unknown Artist' (unknown artist) vs MB='[unknown]' (unknown)"
+***Debug*** [text_utils.py:229] f'[SPELLCHECK END] Corrected: {is_corrected} | Artist sim: {artist_sim:.2f} | Title sim: {title_sim:.2f}' (str): '[SPELLCHECK END] Corrected: False | Artist sim: 0.67 | Title sim: 0.52'
+***Debug*** [import_data_from_mp3_tags.py:62] spell_check_result (dict): {'input_artist': 'Unknown Artist', 'input_title': 'Unknown Title', 'input_artist_norm': 'unknown artist', 'input_title_norm': 'unknown title', 'corrected_artist': 'Unknown Artist', 'corrected_title': 'Unknown Title', 'corrected_artist_norm': 'unknown artist', 'corrected_title_norm': 'unknown title', 'corrected': False, 'mb_score': 100, 'title_similarity': 0.52, 'artist_similarity': 0.67, 'found': True}
+***Debug*** [import_data_from_mp3_tags.py:65] corrected_spelling (str): 'Unknown Title'
+***Debug*** [text_utils.py:248] a (str): 'Unknown Title'
+***Debug*** [text_utils.py:249] b (str): 'Unknown Title'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:68] similarity_percent (float): 1.0
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '1258'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['1258'] (str): 'artist id'
+***Debug*** [database_getter.py:313] 'Falling back to Python-side normalized filtering' (str): 'Falling back to Python-side normalized filtering'
+***Debug*** [database_getter.py:320] 'No such songs found' (str): 'No such songs found'
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): '[METADATA] Successfully extracted from ID3 tags: Jamiroquai - Alright (Radio Edit).mp3'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'jamiroquai'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [text_utils.py:248] a (str): 'Jamiroquai'
+***Debug*** [text_utils.py:249] b (str): 'Jamiroquai'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is Jamiroquai'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is Jamiroquai'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'Jamiroquai'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '100'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['100'] (str): 'artist id'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song Jamiroquai - Alright (Radio Edit), trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Jamiroquai' | Title: 'Alright (Radio Edit)'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'jamiroquai' | Title: 'alright radio edit'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Jamiroquai~' | Title: 'Alright~ (Radio~ Edit)~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): 'Attempting MB Query: recording:Alright~ (Radio~ Edit)~ AND artist:Jamiroquai~'
+***Debug*** [text_utils.py:180] f'Primary results count: {len(recordings)}' (str): 'Primary results count: 20'
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Alright (Radio Edit)' (alright radio edit) vs 'Alright (radio edit)' (alright radio edit) = 1.00"
+***Debug*** [text_utils.py:131] f"[SIMILARITY] '{a}' ({a_norm}) vs '{b}' ({b_norm}) = {sim_score:.2f}" (str): "[SIMILARITY] 'Jamiroquai' (jamiroquai) vs 'Jamiroquai' (jamiroquai) = 1.00"
+***Debug*** [text_utils.py:204] f'[MB RESULT] Score: {mb_score}' (str): '[MB RESULT] Score: 100'
+***Debug*** [text_utils.py:205] f"  Title: input='{title}' ({central_normalize(title)}) vs MB='{mb_title}' ({central_normalize(mb_title)})" (str): "  Title: input='Alright (Radio Edit)' (alright radio edit) vs MB='Alright (radio edit)' (alright radio edit)"
+***Debug*** [text_utils.py:206] f"  Artist: input='{artist}' ({central_normalize(artist)}) vs MB='{mb_artist}' ({central_normalize(mb_artist)})" (str): "  Artist: input='Jamiroquai' (jamiroquai) vs MB='Jamiroquai' (jamiroquai)"
+***Debug*** [text_utils.py:229] f'[SPELLCHECK END] Corrected: {is_corrected} | Artist sim: {artist_sim:.2f} | Title sim: {title_sim:.2f}' (str): '[SPELLCHECK END] Corrected: True | Artist sim: 1.00 | Title sim: 1.00'
+***Debug*** [import_data_from_mp3_tags.py:62] spell_check_result (dict): {'input_artist': 'Jamiroquai', 'input_title': 'Alright (Radio Edit)', 'input_artist_norm': 'jamiroquai', 'input_title_norm': 'alright radio edit', 'corrected_artist': 'Jamiroquai', 'corrected_title': 'Alright (radio edit)', 'corrected_artist_norm': 'jamiroquai', 'corrected_title_norm': 'alright radio edit', 'corrected': True, 'mb_score': 100, 'title_similarity': 1.0, 'artist_similarity': 1.0, 'found': True}
+***Debug*** [import_data_from_mp3_tags.py:65] corrected_spelling (str): 'Alright (radio edit)'
+***Debug*** [text_utils.py:248] a (str): 'Alright (Radio Edit)'
+***Debug*** [text_utils.py:249] b (str): 'Alright (radio edit)'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:68] similarity_percent (float): 1.0
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '100'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['100'] (str): 'artist id'
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): '[METADATA] Successfully extracted from ID3 tags: $uicideboy$ - Carrollton.mp3'
+***Debug*** [mp3_utils.py:78] f'[METADATA] Successfully extracted from ID3 tags: {file.name}' (str): "[METADATA] Successfully extracted from ID3 tags: Lykke Li - 'Sadness Is a Blessing' (Director Tarik Saleh).mp3"
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'lykke li'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [text_utils.py:248] a (str): 'Lykke Li'
+***Debug*** [text_utils.py:249] b (str): 'David Lynch & Lykke Li'
+***Debug*** [text_utils.py:252] result (float): 0.5333333333333333
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is Lykke Li'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is David Lynch & Lykke Li'
+***Debug*** [text_utils.py:248] a (str): 'Lykke Li'
+***Debug*** [text_utils.py:249] b (str): 'Lykke Li'
+***Debug*** [text_utils.py:252] result (float): 1.0
+***Debug*** [import_data_from_mp3_tags.py:95] f'The first is {new_artist_name}' (str): 'The first is Lykke Li'
+***Debug*** [import_data_from_mp3_tags.py:96] f'The second is {similar_artist.name}' (str): 'The second is Lykke Li'
+***Debug*** [database_getter.py:333] category (str): 'artist name'
+***Debug*** [database_getter.py:334] query (str): 'Lykke Li'
+***Debug*** [database_getter.py:183] category (str): 'artist name'
+***Debug*** [database_getter.py:185] normalized (str): 'artist name'
+***Debug*** [database_getter.py:187] valid_categories (list): ['artist name', 'artist origin', 'artist id']
+***Debug*** [database_getter.py:191] normalized (str): 'artist name'
+***Debug*** [database_getter.py:274] 'get_songs_from_db_session' (str): 'get_songs_from_db_session'
+***Debug*** [database_getter.py:279] query (str): '136'
+***Debug*** [database_getter.py:183] category (str): 'artist id'
+***Debug*** [database_getter.py:185] normalized (str): 'artist id'
+***Debug*** [database_getter.py:187] valid_categories (list): ['title', 'artist name', 'album', 'year', 'language', 'artist origin', 'tag', 'artist id', 'name']
+***Debug*** [database_getter.py:191] normalized (str): 'artist id'
+***Debug*** [database_getter.py:295] ['136'] (str): 'artist id'
+***Debug*** [import_data_from_mp3_tags.py:129] "Couldn't find the song, trying spellchecking" (str): "Couldn't find the song, trying spellchecking"
+***Debug*** [import_data_from_mp3_tags.py:59] f"Couldn't find song {new_artist_name} - {new_title}, trying spellcheck" (str): "Couldn't find song Lykke Li - 'Sadness Is a Blessing' (Director Tarik Saleh), trying spellcheck"
+***Debug*** [text_utils.py:134] f"[SPELLCHECK START] Artist: '{artist}' | Title: '{title}'" (str): "[SPELLCHECK START] Artist: 'Lykke Li' | Title: ''Sadness Is a Blessing' (Director Tarik Saleh)'"
+***Debug*** [text_utils.py:135] f"  Input (normalized): Artist: '{central_normalize(artist)}' | Title: '{central_normalize(title)}'" (str): "  Input (normalized): Artist: 'lykke li' | Title: 'sadness is a blessing director tarik saleh'"
+***Debug*** [text_utils.py:139] f"[FUZZY] Artist: '{fuzzy_artist}' | Title: '{fuzzy_title}'" (str): "[FUZZY] Artist: 'Lykke~ Li~' | Title: ''Sadness~ Is~ a~ Blessing'~ (Director~ Tarik~ Saleh)~'"
+***Debug*** [text_utils.py:151] f'Attempting MB Query: {q}' (str): "Attempting MB Query: recording:'Sadness~ Is~ a~ Blessing'~ (Director~ Tarik~ Saleh)~ AND artist:Lykke~ Li~"
+***Debug*** [CRASH @ 2026-07-14 19:36:10]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 23, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 84, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/fill_missing_data/__init__.py", line 14, in fill_missing_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/fill_missing_data/fill_missing_albums.py", line 41, in fill_missing_albums
+    new_album = discover_album_name(song, discovery_modules)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/discoveries_manager.py", line 36, in discover_album_name
+    result = module.get_album_name(art_cln, son_cln)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/discovery_modules/2wikipedia_fetcher.py", line 33, in get_album_name
+    page = _fetch_wikipedia_page(artist, title)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/discovery_modules/2wikipedia_fetcher.py", line 64, in _fetch_wikipedia_page
+    page = wikipedia.page(results[0], auto_suggest=False)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/wikipedia/wikipedia.py", line 276, in page
+    return WikipediaPage(title, redirect=redirect, preload=preload)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/wikipedia/wikipedia.py", line 299, in __init__
+    self.__load(redirect=redirect, preload=preload)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/wikipedia/wikipedia.py", line 336, in __load
+    request = _wiki_request(query_params)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/wikipedia/wikipedia.py", line 742, in _wiki_request
+    return r.json()
+           ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+***Debug*** [CRASH @ 2026-07-25 15:52:15]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/run_import_test.py", line 24, in <module>
+    results = import_data_from_mp3_tags(str(import_dir))
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 307, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata, artist_cache)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 124, in resolve_artist
+    music_session, _ = get_global_database_sessions()
+    ^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
