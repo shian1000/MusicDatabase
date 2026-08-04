@@ -2541,3 +2541,13 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^^^^^
 TypeError: cannot unpack non-iterable NoneType object
 
+***Debug*** [CRASH @ 2026-08-04 21:07:59]
+Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+    from utils.common.text_utils import similarity
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/common/text_utils.py", line 8, in <module>
+    from settings import settings
+  File "/home/shianman/Documents/Code/MusicDatabase/src/settings.py", line 3, in <module>
+    from upath import UPath
+ModuleNotFoundError: No module named 'upath'
+
