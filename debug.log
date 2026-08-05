@@ -2551,3 +2551,12 @@ Traceback (most recent call last):
     from upath import UPath
 ModuleNotFoundError: No module named 'upath'
 
+***Debug*** [CRASH @ 2026-08-05 09:25:30]
+Traceback (most recent call last):
+  File "<string>", line 21, in <module>
+    r4 = get_songs_from_db_session('artist', 'a')
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 316, in get_songs_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
