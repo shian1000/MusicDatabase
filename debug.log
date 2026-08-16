@@ -2560,3 +2560,384 @@ Traceback (most recent call last):
                                            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
 KeyError: None
 
+***Debug*** [CRASH @ 2026-08-16 09:41:28]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: songs.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 135, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/manual_management/__init__.py", line 17, in manual_management
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/song_actions/edit_songs.py", line 223, in add_songs_menu
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_management.py", line 225, in add_db_entry
+    music_session.commit()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: songs.title
+[SQL: INSERT INTO songs (title, album, year, language, artist_id, nostalgic, melancholic, party) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (None, None, 2002, None, 1679, None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+***Debug*** [CRASH @ 2026-08-16 09:42:32]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 386, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
+***Debug*** [CRASH @ 2026-08-16 09:42:50]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 386, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
+***Debug*** [CRASH @ 2026-08-16 09:43:07]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/prompt_toolkit/input/vt100.py", line 165, in _attached_input
+    loop.add_reader(fd, callback_wrapper)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/asyncio/selector_events.py", line 351, in add_reader
+    self._add_reader(fd, callback, *args)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/asyncio/selector_events.py", line 283, in _add_reader
+    self._selector.register(fd, selectors.EVENT_READ,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            (handle, None))
+                            ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/selectors.py", line 345, in register
+    self._selector.register(key.fd, poller_events)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 17, in <module>
+    result = search_and_pick_db_object('Song')
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 318, in search_and_pick_db_object
+    return pick_from_db_objects(entries_objects, question=pick_question, back_label=back_label)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 236, in pick_from_db_objects
+    sel_obj_index: Optional[int] = questionary.select(question, choices=choices, style=style).ask()
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/questionary/question.py", line 64, in ask
+    return self.unsafe_ask(patch_stdout)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/questionary/question.py", line 89, in unsafe_ask
+    return self.application.run()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/prompt_toolkit/application/application.py", line 1002, in run
+    return asyncio.run(coro)
+           ~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/prompt_toolkit/application/application.py", line 886, in run_async
+    return await _run_async(f)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/prompt_toolkit/application/application.py", line 734, in _run_async
+    with self.input.raw_mode(), self.input.attach(
+                                ~~~~~~~~~~~~~~~~~^
+        read_from_input_in_context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ), attach_winch_signal_handler(self._on_resize):
+    ^
+  File "/usr/lib/python3.14/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/home/shianman/Documents/Code/MusicDatabase/venv/lib/python3.14/site-packages/prompt_toolkit/input/vt100.py", line 174, in _attached_input
+    raise EOFError
+EOFError
+
+***Debug*** [CRASH @ 2026-08-16 09:43:10]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 386, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
+***Debug*** [CRASH @ 2026-08-16 09:43:17]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 386, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
+***Debug*** [CRASH @ 2026-08-16 09:45:08]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 386, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
+***Debug*** [CRASH @ 2026-08-16 09:48:07]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/fetch_songs/__init__.py", line 22, in fetch_artists
+    artist_objects = get_artists_from_db_session(category, querry)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/database/database_getter.py", line 386, in get_artists_from_db_session
+    filtered_query = filtered_query.filter(CATEGORY_DB_FILTERS[category](word))
+                                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: None
+
