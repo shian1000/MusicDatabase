@@ -2941,3 +2941,44 @@ Traceback (most recent call last):
                                            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
 KeyError: None
 
+***Debug*** [CRASH @ 2026-08-17 19:38:00]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 15, in main_menu
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 141, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 358, in import_data_from_mp3_tags
+    new_artist_obj = resolve_artist(metadata, artist_cache)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 236, in resolve_artist
+    existing_artist = check_artist_spelling(metadata)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 44, in check_artist_spelling
+    corrected_spelling = spell_check_result["corrected_artist"]
+                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'corrected_artist'
+
