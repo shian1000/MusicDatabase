@@ -2992,3 +2992,46 @@ Traceback (most recent call last):
     from upath import UPath
 ModuleNotFoundError: No module named 'upath'
 
+***Debug*** [CRASH @ 2026-08-28 10:57:23]
+Traceback (most recent call last):
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 15, in <module>
+    main()
+    ~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/main.py", line 12, in main
+    main_menu()
+    ~~~~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/__init__.py", line 16, in main_menu
+    execute_menu_item("Main Menu", action_map, exit_label="Exit")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/__init__.py", line 38, in enter_database
+    execute_menu_item("Database", action_map, exit_label="Exit database")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/__init__.py", line 141, in manage_database
+    execute_menu_item("Manage database", action_map)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 39, in fetch_database_data
+    execute_menu_item("Manage database", action_map, exit_label="Back")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/ui/menu_utils.py", line 96, in execute_menu_item
+    action_name: Optional[str] = action()
+                                 ~~~~~~^^
+  File "/home/shianman/Documents/Code/MusicDatabase/src/menu/main_menu/enter_database/manage_database/fetch_database_data/__init__.py", line 18, in import_data
+    imported_songs = import_data_from_mp3_tags(songs_path)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 370, in import_data_from_mp3_tags
+    new_song_obj = resolve_song(metadata, new_artist_obj)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 279, in resolve_song
+    simlar_song_exists = does_similar_song_exists(metadata, artist_obj)
+  File "/home/shianman/Documents/Code/MusicDatabase/src/utils/discoveries/import_data_from_mp3_tags.py", line 127, in does_similar_song_exists
+    corrected_spelling = spell_check_result["corrected_title"]
+                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'corrected_title'
+
