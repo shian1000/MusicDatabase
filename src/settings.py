@@ -21,11 +21,13 @@ class Settings:
     database_dir: UPath = _default_database_dir()
     config_dir: UPath = UPath(__file__).parent / "config"
     music_database_dir: UPath = database_dir / UPath("music.db")
-    local_library_dir_str: str = "/media/shianman/JethrotullHDD/Shared/Music/"
+    # The mp3 collection. Moved 2026-10-12 from the HDD (JethrotullHDD/Shared/Music,
+    # the old copy is still there for now) to the T7 SSD, next to sharing_dir.
+    local_library_dir_str: str = "/media/shianman/T7/Shared/Music/Library/"
     local_library_dir: UPath = UPath(local_library_dir_str)
     smb_username: str = os.getenv("SMB_USERNAME")
     smb_password: str = os.getenv("SMB_PASSWORD")
-    smb_local_library_dir: UPath = UPath(f"smb://{smb_username}:{smb_password}@jethrotull.local/Shared/Music/")
+    smb_local_library_dir: UPath = UPath(f"smb://{smb_username}:{smb_password}@jethrotull.local/Shared (SSD)/Music/Library/")
     export_dir: UPath = UPath(__file__).parent.parent / "import"
     # Where music.db / tag.db are copied for the mobile app to download
     # (utils/database/sharing.py). Lives on the external T7 drive, which is
